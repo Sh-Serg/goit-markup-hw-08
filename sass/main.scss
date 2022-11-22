@@ -1,0 +1,22 @@
+@import './base/reset';
+@import './utils/colors';
+@import './utils/vars';
+@import './base/base';
+
+@import './utils/mixin';
+@import './utils/placeholder';
+@import './utils/v-hidden';
+
+@import './components/header';
+@import './components/logo';
+@import './components/hero';
+@import './components/modal';
+@import './components/advantages';
+@import './components/work';
+@import './components/team';
+@import './components/social';
+@import './components/customers';
+@import './components/footer';
+
+@import './components/filter';
+@import './components/portfolio';

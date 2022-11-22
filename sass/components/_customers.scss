@@ -1,0 +1,38 @@
+.customers {
+  @extend %section;
+}
+
+.customers__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  color: getColor(bg-team);
+}
+
+.customers__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 170px;
+  height: 92px;
+  border: 1px solid getColor(bg-team);
+  border-radius: 4px;
+
+  @include transit(border);
+
+  &:hover,
+  &:focus {
+    border: 1px solid getColor(accent);
+  }
+}
+.customers__logo {
+  fill: getColor(bg-team);
+
+  @include transit(fill);
+
+  .customers__link:hover &,
+  .customers__link:focus & {
+    fill: getColor(accent);
+  }
+}

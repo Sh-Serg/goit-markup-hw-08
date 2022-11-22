@@ -1,0 +1,30 @@
+//  --primary-text-color: #757575;
+//   --title-color: #212121;
+//   --accent-color: #2196f3;
+//   --white-color: #ffffff;
+//   --color-company: #afb1b8;
+//   --white-color-footer: rgba(255, 255, 255, 0.6);
+//   --background-accent: #f5f4fa;
+//   --background-footer: #2f303a;
+//   --background-icon: rgba(255, 255, 255, 0.1);
+
+//   --item-interval: 30px;
+//   /* --potfolio-item-gap: 60px; */
+
+//   --time-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+$colors: (
+  'primary': #757575,
+  'title': #212121,
+  'accent': #2196f3,
+  'white-': #fff,
+  'light-gray': rgba(255, 255, 255, 0.6),
+  'gray-': rgba(255, 255, 255, 0.1),
+  'dark-gray': #2f303a,
+  'bg-advantages': #f5f4fa,
+  'bg-team': #afb1b8,
+);
+
+@function getColor($key) {
+  @return map-get($colors, $key);
+}

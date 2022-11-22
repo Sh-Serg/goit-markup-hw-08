@@ -1,0 +1,18 @@
+@mixin fonts($fs, $lh, $fw: false, $ls: 0.02em) {
+  @if $fw {
+    font-weight: $fw;
+  }
+  font-size: $fs;
+  line-height: decimal-round($lh / $fs);
+  letter-spacing: $ls;
+}
+
+@mixin transit($property1, $property2: false) {
+  @if ($property2) {
+    transition: $property1 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      $property2 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  @if ($property2==false) {
+    transition: $property1 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}

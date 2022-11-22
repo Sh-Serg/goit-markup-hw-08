@@ -1,0 +1,30 @@
+.socnetworks {
+  display: flex;
+  justify-content: space-between;
+}
+
+.socnetworks__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+
+  @include transit(background-color, border-radius);
+
+  &:hover,
+  &:focus {
+    background-color: getColor(accent);
+    border-radius: 50%;
+  }
+}
+.socnetworks__icon {
+  fill: getColor(bg-team);
+  @include transit(fill);
+
+  .socnetworks__link:hover &,
+  .socnetworks__link:focus & {
+    fill: getColor(white-);
+  }
+}

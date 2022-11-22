@@ -1,0 +1,42 @@
+.team {
+  @extend %section;
+  background-color: getColor(bg-advantages);
+}
+.team > .container {
+  margin-bottom: 0;
+}
+.team__user-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.team__user-item {
+  background: #ffffff;
+
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.user__case {
+  padding: 30px 32px;
+}
+
+.user__name,
+.user__position {
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+.user__name {
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  color: getColor(title);
+}
+
+.user__position {
+  margin-bottom: 16px;
+}
