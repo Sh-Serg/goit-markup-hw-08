@@ -1,13 +1,28 @@
 .hero {
-  max-width: 1600px;
-  height: 600px;
+  max-width: 480px;
+  height: 400px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
 
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../img/hero.jpg);
+  @include mq(tablet) {
+    max-width: 768px;
+  }
+
+  @include mq(desktop) {
+    max-width: 1600px;
+    height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+
+  // padding-top: 200px;
+  // padding-bottom: 200px;
+
+  // background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+  //   url(../img/hero.jpg);
+
   background-color: getColor(dark-gray);
 
   background-repeat: no-repeat;
@@ -16,14 +31,55 @@
 
   text-align: center;
 
+  // mobile screen
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../img/hero/hero_sm@1x.jpg);
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../img/hero/hero_sm@2x.jpg);
+  }
+
+  // tablet screen
+  @media screen and (min-width: 481px) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../img/hero/hero_md@1x.jpg);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../img/hero/hero_md@2x.jpg);
+    }
+  }
+
+  // desktop screen
+  @media screen and (min-width: 769px) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../img/hero/hero_lg@1x.jpg);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../img/hero/hero_lg@2x.jpg);
+    }
+  }
+
   &__title {
     margin-bottom: 30px;
 
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: calc(42 / 26);
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: getColor(white-);
+
+    @include mq(desktop) {
+      font-size: 44px;
+      line-height: 1.36;
+    }
+  }
+}
+.hero__btn {
+  @include mq(desktop) {
+    width: 216px;
   }
 }

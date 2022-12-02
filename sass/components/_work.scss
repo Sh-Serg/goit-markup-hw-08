@@ -1,5 +1,9 @@
 .work {
-  @extend %section;
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+  display: block;
+  margin-bottom: 94px;
 }
 
 .work__list {

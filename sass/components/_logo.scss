@@ -1,14 +1,25 @@
 .logo {
-  margin-right: 93px;
-  padding-top: 24px;
-  padding-bottom: 25px;
+  // margin-right: 93px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 
   font-family: Raleway, sans-serif;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: #000000;
+
+  @include respond-to(tablet) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+
+  @include respond-to(desktop) {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    font-size: 26px;
+  }
 }
 .logo__begin {
   color: getColor(accent);

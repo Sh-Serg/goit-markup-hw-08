@@ -16,3 +16,43 @@
     transition: $property1 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
+// $breakpoints: (
+//   'mobile': 480px,
+//   'tablet': 768px,
+//   'desktop': 1200px,
+// ) !default;
+
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
+
+// .selector {
+//   color: red;
+
+//   @include respond-to(tablet) {
+//     color: blue;
+//   }
+// }
+
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: calc($width - 0.02px);
+    }
+    @media screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+  // If the key doesn't exist in the map
+  @else {
+    @warn "На жаль, не вдалося отримати значення  `#{$width}`. "
+        + "Доступні значення: #{map-keys($breakpoints)}.";
+  }
+}

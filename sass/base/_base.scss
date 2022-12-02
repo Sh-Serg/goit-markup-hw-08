@@ -5,21 +5,35 @@ body {
 }
 
 .container {
-  width: 1200px;
+  // width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-right: auto;
   margin-left: auto;
   // outline: 2px dashed red;
+
+  @include respond-to(mobile) {
+    width: 480px;
+  }
+  @include respond-to(tablet) {
+    width: 768px;
+  }
+  @include respond-to(desktop) {
+    width: 1200px;
+  }
 }
 
 .button {
+  width: 200px;
+  height: 50px;
   background-color: getColor(accent);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: none;
   border-radius: 4px;
-  padding: 10px 32px;
+  padding: 10px;
+  // padding-bottom: 10px;
 
+  text-align: center;
   font-family: Roboto, sans-serif;
   font-weight: 700;
   font-size: 16px;
@@ -30,17 +44,28 @@ body {
 }
 
 .title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: calc(33 / 28);
   text-align: center;
   letter-spacing: 0.03em;
   color: getColor(title);
+
+  @include respond-to(desktop) {
+    margin-bottom: 50px;
+
+    font-size: 36px;
+    line-height: calc(42 / 36);
+  }
 }
 
 .thumb {
   position: relative;
   overflow: hidden;
+
+  @include mq(desktop, max) {
+    color: red;
+  }
 }

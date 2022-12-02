@@ -5,16 +5,31 @@
 .customers__list {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  margin-top: -30px;
+  margin-left: -30px;
+  // gap: 30px;
   color: getColor(bg-team);
+}
+
+.customers__item {
+  margin-top: 30px;
+  margin-left: 30px;
+  // margin: 15px;
+  width: calc(100% / 2 - 30px);
+
+  @include respond-to(tablet) {
+    width: calc(100% / 3 - 30px);
+  }
+
+  @include respond-to(desktop) {
+    width: calc(100% / 6 - 30px);
+  }
 }
 
 .customers__link {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  width: 170px;
   height: 92px;
   border: 1px solid getColor(bg-team);
   border-radius: 4px;

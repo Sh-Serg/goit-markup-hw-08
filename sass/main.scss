@@ -1,12 +1,13 @@
 @import './base/reset';
 @import './utils/colors';
 @import './utils/vars';
-@import './base/base';
+@import './utils/breakpoints';
 
 @import './utils/mixin';
 @import './utils/placeholder';
 @import './utils/v-hidden';
 
+@import './base/base';
 @import './components/header';
 @import './components/logo';
 @import './components/hero';
@@ -17,6 +18,7 @@
 @import './components/social';
 @import './components/customers';
 @import './components/footer';
+@import './components/menu';
 
 @import './components/filter';
 @import './components/portfolio';

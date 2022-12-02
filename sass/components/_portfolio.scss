@@ -6,9 +6,20 @@
 
 .filter {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+
+  margin-bottom: 40px;
   margin-top: 0;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  @include mq(tablet) {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+
+  @include mq(desktop) {
+    margin-bottom: 50px;
+  }
 }
 
 .filter__btn {
@@ -37,21 +48,36 @@
   }
 }
 
-.filter__item:not(:last-child) {
-  margin-right: 8px;
-}
+// .filter__item:not(:last-child) {
+//   margin-right: 8px;
+// }
 
 .portfolio {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
+  @include mq(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
 }
 
 .portfolio__item {
-  flex-basis: calc(100% / 3 - 30px);
-  margin-left: 30px;
-  margin-top: 30px;
+  width: 100%;
+
+  @include mq(tablet, max) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include mq(tablet) {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+  @include mq(desktop) {
+    flex-basis: calc(100% / 3 - 30px);
+  }
 
   @include transit(box-shadow);
 
