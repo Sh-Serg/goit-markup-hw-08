@@ -1289,7 +1289,7 @@ body {
   margin-top: 0;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 8px;
+  gap: 15px 8px;
 }
 @media screen and (min-width: 768px) {
   .filter {
