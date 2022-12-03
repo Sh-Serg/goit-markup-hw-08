@@ -101,6 +101,10 @@
 
   color: getColor(primary);
 
+  @include mq(desktop, max) {
+    font-size: 12px;
+  }
+
   &:not(:last-child) {
     @media screen and (max-width: 1199px) {
       margin-bottom: 10px;
